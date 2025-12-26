@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Coinbase Hourly Scanner</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Coinbase Hourly Scanner</h1>
+    <span class="badge">Next-hour candidates (execution-aware)</span>
+    <span class="badge mono" id="asof">—</span>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="row" style="justify-content: space-between;">
+        <div>
+          <div class="row">
+            <button id="btn">Find Opportunities</button>
+            <small id="msg"></small>
+          </div>
+          <div class="kpi">
+            <div class="tile"><div class="label">WebSocket</div><div class="value" id="ws">—</div></div>
+            <div class="tile"><div class="label">Tracked products</div><div class="value" id="tracked">—</div></div>
+            <div class="tile"><div class="label">L2 products</div><div class="value" id="l2">—</div></div>
+            <div class="tile"><div class="label">Warm-up</div><div class="value" id="warm">—</div></div>
+            <div class="tile"><div class="label">Regime</div><div class="value" id="regime">—</div></div>
+            <div class="tile"><div class="label">Horizon</div><div class="value">60 minutes</div></div>
+          </div>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Pair</th>
+            <th>Price</th>
+            <th>15m</th>
+            <th>60m</th>
+            <th>Vol (5m vs 60m avg)</th>
+            <th>TFI 5m</th>
+            <th>OBI 10bps</th>
+            <th>Impact $250</th>
+            <th>Spread</th>
+            <th>24h $Vol (approx)</th>
+            <th>Score</th>
+            <th>Drivers</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+
+      <p style="margin-top:10px">
+        <small>
+          This is a scanner, not a promise of performance. One-hour moves are noisy; spreads/impact/fees can dominate.
+          Start with observation or paper trading.
+        </small>
+      </p>
+    </div>
+  </main>
+
+  <script src="/static/app.js?v=7"></script>
+</body>
+</html>

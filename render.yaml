@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: coinbase-hourly-scanner
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /api/status
+    envVars:
+      - key: QUOTE_CCY
+        value: USD
+      - key: MAX_PRODUCTS
+        value: "300"
+      - key: SHORTLIST_SIZE
+        value: "30"
+      - key: SHORTLIST_REFRESH_SECONDS
+        value: "120"
+      - key: SHORTLIST_CANDIDATES
+        value: "80"
+      - key: IMPACT_NOTIONAL_USD
+        value: "250"
+      - key: CORR_WINDOW_MINUTES
+        value: "120"
+      - key: CORR_THRESHOLD
+        value: "0.90"
+      - key: MIN_QUOTE_VOL_USD_24H
+        value: "5000000"
+      - key: MAX_SPREAD_PCT
+        value: "0.006"
+      - key: WS_URL
+        value: wss://ws-feed.exchange.coinbase.com

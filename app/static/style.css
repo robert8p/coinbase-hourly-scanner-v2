@@ -1,0 +1,22 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+body { margin: 0; background: #0b0f17; color: #e6edf3; }
+header { padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
+h1 { margin:0; font-size: 18px; letter-spacing: .2px; }
+.badge { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: rgba(255,255,255,0.08); }
+main { padding: 18px 20px; max-width: 1100px; margin: 0 auto;}
+.card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+.row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+button { background: #1f6feb; color: white; border: 0; padding: 10px 14px; border-radius: 12px; font-weight: 650; cursor:pointer; }
+button:disabled { opacity: .6; cursor:not-allowed; }
+small { color: rgba(230,237,243,0.75); }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top;}
+th { color: rgba(230,237,243,0.8); font-weight: 650; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+.kpi { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-top: 12px; }
+.kpi .tile { background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 10px; }
+.kpi .label { font-size: 12px; color: rgba(230,237,243,0.7); }
+.kpi .value { font-size: 16px; margin-top: 4px; }
+.flag { display:inline-block; padding: 2px 6px; border-radius: 999px; background: rgba(255,160,0,0.18); border: 1px solid rgba(255,160,0,0.35); margin-right: 6px; margin-top: 4px;}
+.good { color: #7ee787; }
+.bad { color: #ff7b72; }
